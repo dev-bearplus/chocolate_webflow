@@ -7,9 +7,6 @@
     const isHomepage = pathname === '/' || pathname === '' || pathname === '/hk-zh-hant' || pathname === '/hk-en' || pathname === '/hk-zh-hant/' || pathname === '/hk-en/' || pathname === '/ae-en' || pathname === '/ae-ar/';
     let currentSubdomain = localStorage.getItem('currentSubdomain');
     let checkDomain = '';
-    // check is on language ae
-    let isAE = pathname.includes('ae-en') || pathname.includes('ae-ar');
-    if (isAE) return;
     if (!currentSubdomain && isHomepage) {
         const cachedSuggestedLang = sessionStorage.getItem('geoSuggestedLang');
         if (cachedSuggestedLang) {
@@ -27,10 +24,15 @@
                         break;
                     }
                 }
-                if (countryCode === 'HK') {
+                const sgCountries = ['SG', 'MY', 'ID', 'BN'];
+                const hkCountries = ['HK', 'MO', 'CN'];
+
+                if (sgCountries.includes(countryCode)) {
+                    suggestedLang = 'en-SG';
+                } else if (hkCountries.includes(countryCode)) {
                     suggestedLang = 'zh-HK';
-                    // } else if (countryCode === 'AE') {
-                    //     suggestedLang = 'ar-AE';
+                } else {
+                    suggestedLang = 'ar-AE';
                 }
                 checkDomain = suggestedLang;
                 sessionStorage.setItem('geoSuggestedLang', suggestedLang);
