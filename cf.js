@@ -4,7 +4,7 @@
     }
     let currentLang = document.documentElement.lang || 'en-SG';
     const pathname = window.location.pathname;
-    const isHomepage = pathname === '/' || pathname === '' || pathname === '/hk-zh-hant' || pathname === '/hk-en' || pathname === '/hk-zh-hant/' || pathname === '/hk-en/' || pathname === '/ae-en' || pathname === '/ae-ar/';
+    const isHomepage = pathname === '/' || pathname === '' || pathname === '/hk-zh-hant' || pathname === '/hk-en' || pathname === '/hk-zh-hant/' || pathname === '/hk-en/' || pathname === '/ae-en' || pathname === '/ae-ar';
     let currentSubdomain = localStorage.getItem('currentSubdomain');
     let checkDomain = '';
     if (!currentSubdomain && isHomepage) {
@@ -12,7 +12,7 @@
         if (cachedSuggestedLang) {
             checkDomain = cachedSuggestedLang;
         } else {
-            let suggestedLang = 'en-SG'; // Default location
+            let suggestedLang = 'ar-AE'; // Default location
             try {
                 const response = await fetch('https://1.1.1.1/cdn-cgi/trace');
                 const data = await response.text();
@@ -34,11 +34,11 @@
                 } else {
                     suggestedLang = 'ar-AE';
                 }
-                checkDomain = suggestedLang;
-                sessionStorage.setItem('geoSuggestedLang', suggestedLang);
             } catch (e) {
                 console.error('Geo detect failed', e);
             }
+            checkDomain = suggestedLang;
+            sessionStorage.setItem('geoSuggestedLang', suggestedLang);
         }
         // Keep the automatic suggestion session-scoped; an explicit language
         // selection still uses currentSubdomain in localStorage.
