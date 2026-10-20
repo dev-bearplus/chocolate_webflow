@@ -1,4 +1,3 @@
-//test push choco action2
 (async function priorityLanguageCheck() {
     if (window.location.pathname === '/programmes' && $('html').attr('lang') === 'en-SG') {
         window.location.href = '/404';
