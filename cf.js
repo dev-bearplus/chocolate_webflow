@@ -4217,26 +4217,27 @@ const mainScript = () => {
                 const lines = csvText.trim().split(/\r?\n/).map(line => line.trim()).filter(Boolean);
                 if (lines.length < 2) return;
 
-                const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
-                const dateIdx = headers.findIndex(h => h.includes('date'));
-                const aedIdx = headers.findIndex(h => h.includes('aed'));
-                const usdIdx = headers.findIndex(h => h.includes('usd'));
+                const headers = lines[0].split(',').map(header => header.trim().toLowerCase());
+                const latestRow = lines[lines.length - 1].split(',').map(value => value.trim());
+                const dateIdx = headers.findIndex(header => header.includes('date'));
+                const navFields = [
+                    { attribute: 'aed-b1', terms: ['b1', 'aed'], fallbackIdx: 1 },
+                    { attribute: 'aed-b2', terms: ['b2', 'aed'], fallbackIdx: 2 },
+                    { attribute: 'usd-a1', terms: ['a1', 'usd'], fallbackIdx: 3 },
+                    { attribute: 'usd-a2', terms: ['a2', 'usd'], fallbackIdx: 4 }
+                ];
 
-                const latestRow = lines[lines.length - 1].split(',').map(v => v.trim());
+                navFields.forEach(({ attribute, terms, fallbackIdx }) => {
+                    const columnIdx = headers.findIndex(header => terms.every(term => header.includes(term)));
+                    const value = latestRow[columnIdx !== -1 ? columnIdx : fallbackIdx];
+                    if (value === undefined) return;
+
+                    const $field = $(`[uae-daily="${attribute}"]`);
+                    $field.text(value).addClass('loaded');
+                    $field.closest('.load-ske').addClass('loaded');
+                });
+
                 const dateVal = dateIdx !== -1 ? latestRow[dateIdx] : latestRow[0];
-                const aedVal = aedIdx !== -1 ? latestRow[aedIdx] : latestRow[1];
-                const usdVal = usdIdx !== -1 ? latestRow[usdIdx] : latestRow[2];
-
-                if (usdVal !== undefined) {
-                    const $usd = $('[uae-daily="usd"]');
-                    $usd.text(usdVal).addClass('loaded');
-                    $usd.closest('.load-ske').addClass('loaded');
-                }
-                if (aedVal !== undefined) {
-                    const $aed = $('[uae-daily="aed"]');
-                    $aed.text(aedVal).addClass('loaded');
-                    $aed.closest('.load-ske').addClass('loaded');
-                }
                 if (dateVal !== undefined) {
                     const formattedDate = formatNavDate(dateVal, isArabic);
                     const $date = $('[uae-daily="date"]');
@@ -4246,7 +4247,7 @@ const mainScript = () => {
             } catch (error) {
                 console.error('Error fetching UAE daily NAV data:', error);
             } finally {
-                const $dailyNavFields = $('[uae-daily="usd"], [uae-daily="aed"], [uae-daily="date"]');
+                const $dailyNavFields = $('[uae-daily="aed-b1"], [uae-daily="aed-b2"], [uae-daily="usd-a1"], [uae-daily="usd-a2"], [uae-daily="date"]');
                 $dailyNavFields.addClass('loaded');
                 $dailyNavFields.closest('.load-ske').addClass('loaded');
             }
