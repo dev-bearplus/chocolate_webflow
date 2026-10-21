@@ -14,15 +14,22 @@
         } else {
             let suggestedLang = 'ar-AE'; // Default location
             try {
-                const response = await fetch('https://1.1.1.1/cdn-cgi/trace');
-                const data = await response.text();
                 let countryCode = '';
-
-                for (const line of data.split('\n')) {
-                    if (line.startsWith('loc=')) {
-                        countryCode = line.split('=')[1].trim();
-                        break;
+                try {
+                    const ctrl = new AbortController();
+                    setTimeout(() => ctrl.abort(), 3000);
+                    const response = await fetch('https://cloudflare.com/cdn-cgi/trace', { signal: ctrl.signal });
+                    const data = await response.text();
+                    for (const line of data.split('\n')) {
+                        if (line.startsWith('loc=')) {
+                            countryCode = line.split('=')[1].trim();
+                            break;
+                        }
                     }
+                } catch (_) {
+                    const response = await fetch('https://ipwho.is/');
+                    const data = await response.json();
+                    countryCode = data.country_code || '';
                 }
                 const sgCountries = ['SG', 'MY', 'ID', 'BN'];
                 const hkCountries = ['HK', 'MO', 'CN'];
