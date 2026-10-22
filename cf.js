@@ -1,4 +1,4 @@
-(async function priorityLanguageCheck() {
+window.__redirectCheck = (async function priorityLanguageCheck() {
     if (window.location.pathname === '/programmes' && $('html').attr('lang') === 'en-SG') {
         window.location.href = '/404';
     }
@@ -76,6 +76,7 @@
             // whole page here and then download it again after the redirect.
             let response = await fetch(targetUrl, { method: 'HEAD' });
             if (response.ok) {
+                window.__willRedirect = true;
                 window.location.replace(targetUrl);
             } else {
                 // localStorage.setItem('currentSubdomain', currentLang);
@@ -214,6 +215,7 @@ const mainScript = () => {
         if (!shouldSkipRedirect) {
             const matchedLang = langPaths.find(lang => new RegExp(`^/${lang}/.+`).test(pathname));
             if (matchedLang) {
+                window.__willRedirect = true;
                 window.location.replace(`/${matchedLang}`);
                 return;
             }
@@ -270,7 +272,14 @@ const mainScript = () => {
     }
     activeLanguage();
     if ($('.intro-wrap').length) {
-        $('.intro-wrap').addClass('loaded')
+        if (window.__willRedirect) return;
+        (window.__redirectCheck || Promise.resolve()).then(() => {
+            if (!window.__willRedirect) {
+                $('.intro-wrap').addClass('loaded')
+            }
+        }).catch(() => {
+            $('.intro-wrap').addClass('loaded')
+        })
     }
     const schemaFAQParentAttrs = {
         itemscope: true,
