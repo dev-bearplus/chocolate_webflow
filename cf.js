@@ -4,15 +4,15 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
     }
     let currentLang = document.documentElement.lang || 'en-SG';
     const pathname = window.location.pathname;
-    const isHomepage = pathname === '/' || pathname === '' || pathname === '/hk-zh-hant' || pathname === '/hk-en' || pathname === '/hk-zh-hant/' || pathname === '/hk-en/' || pathname === '/ae-en' || pathname === '/ae-ar';
+    const isRootHomepage = pathname === '/' || pathname === '';
     let currentSubdomain = localStorage.getItem('currentSubdomain');
     let checkDomain = '';
-    if (!currentSubdomain && isHomepage) {
+    if (!currentSubdomain && isRootHomepage) {
         const cachedSuggestedLang = sessionStorage.getItem('geoSuggestedLang');
         if (cachedSuggestedLang) {
             checkDomain = cachedSuggestedLang;
         } else {
-            let suggestedLang = 'ar-AE'; // Default location
+            let suggestedLang = 'en-SG';
             try {
                 let countryCode = '';
                 try {
@@ -34,11 +34,13 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
                 const sgCountries = ['SG', 'MY', 'ID', 'BN'];
                 const hkCountries = ['HK', 'MO', 'CN'];
 
+                const aeCountries = ['AE', 'SA', 'KW', 'BH', 'OM', 'QA', 'JO', 'LB', 'EG', 'IQ'];
+
                 if (sgCountries.includes(countryCode)) {
                     suggestedLang = 'en-SG';
                 } else if (hkCountries.includes(countryCode)) {
                     suggestedLang = 'zh-HK';
-                } else {
+                } else if (aeCountries.includes(countryCode)) {
                     suggestedLang = 'ar-AE';
                 }
             } catch (e) {
