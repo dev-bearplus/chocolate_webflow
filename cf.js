@@ -57,7 +57,8 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
         // selection still uses currentSubdomain in localStorage.
     }
 
-    const storedSubdomain = localStorage.getItem('currentSubdomain') || checkDomain;
+    // const storedSubdomain = localStorage.getItem('currentSubdomain') || checkDomain;
+    const storedSubdomain = checkDomain;
     if (storedSubdomain && currentLang !== storedSubdomain) {
         let langSubDomain = '';
         if (storedSubdomain === 'zh-HK') langSubDomain = 'hk-zh-hant';
