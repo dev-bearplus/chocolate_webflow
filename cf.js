@@ -1,4 +1,9 @@
 window.__redirectCheck = (async function priorityLanguageCheck() {
+    const botUserAgentPattern = /bot|crawler|spider|slurp|google-inspectiontool|lighthouse|pagespeed|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|applebot|petalbot|bytespider/i;
+    const isLikelyBot = navigator.webdriver === true || botUserAgentPattern.test(navigator.userAgent || '');
+
+    if (isLikelyBot) return;
+
     if (window.location.pathname === '/programmes' && $('html').attr('lang') === 'en-SG') {
         window.location.href = '/404';
     }
@@ -12,7 +17,7 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
         if (cachedSuggestedLang) {
             checkDomain = cachedSuggestedLang;
         } else {
-            let suggestedLang = 'en-SG';
+            let suggestedLang = 'en-AE';
             try {
                 let countryCode = '';
                 try {
@@ -34,13 +39,11 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
                 const sgCountries = ['SG', 'MY', 'ID', 'BN'];
                 const hkCountries = ['HK', 'MO', 'CN'];
 
-                const aeCountries = ['AE', 'SA', 'KW', 'BH', 'OM', 'QA', 'JO', 'LB', 'EG', 'IQ'];
-
                 if (sgCountries.includes(countryCode)) {
                     suggestedLang = 'en-SG';
                 } else if (hkCountries.includes(countryCode)) {
                     suggestedLang = 'zh-HK';
-                } else if (aeCountries.includes(countryCode)) {
+                } else if (countryCode === 'AE') {
                     suggestedLang = 'ar-AE';
                 }
             } catch (e) {
