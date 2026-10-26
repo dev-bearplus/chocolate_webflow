@@ -1,496 +1,816 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://www.chocolatefinance.com/hk-en</loc>
+        <loc>https://www.chocolatefinance.com/</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/"/>
         <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en"/>
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar" />
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en"/>
+    </url>
+    <url>
+        <loc>https://www.chocolatefinance.com/hk-en</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/hk-zh-hant</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/"/>
         <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en"/>
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar" />
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en"/>
     </url>
     <url>
-        <loc>https://www.chocolatefinance.com/hk-zh-hans</loc>
+        <loc>https://www.chocolatefinance.com/ae-en</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/"/>
         <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en"/>
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar" />
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en"/>
     </url>
     <url>
-        <loc>https://www.chocolatefinance.com</loc>
+        <loc>https://www.chocolatefinance.com/ae-ar</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/"/>
         <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en"/>
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar" />
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/about-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/about-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/hk-en/about-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/about-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/hk-zh-hant/about-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/about-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/ae-en/about-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/about-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/ae-ar/about-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/about-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/about-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/about-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blog</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blog"/>
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/blog" />
+    </url>
+    <url>
+        <loc>https://www.chocolatefinance.com/hk-zh-hant/blog</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/blog"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blog"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/contact-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/hk-en/contact-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/hk-zh-hant/contact-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/ae-en/contact-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/ae-ar/contact-us</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/contact-us"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/contact-us"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/faqs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/faqs"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs" />
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/hk-en/faqs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/faqs"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs" />
     </url>
-     <url>
+    <url>
         <loc>https://www.chocolatefinance.com/hk-zh-hant/faqs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/faqs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/faqs"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/faqs" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/faqs" />
     </url>
-  
     <url>
         <loc>https://www.chocolatefinance.com/how-it-works</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works" />
-
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/hk-en/how-it-works</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works" />
-
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/hk-zh-hant/how-it-works</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works" />
-
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/ae-en/how-it-works</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works" />
-
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/ae-ar/how-it-works</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/how-it-works"/>
-        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works" />
-        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works" />
-
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-HK" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-MO" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-CN" href="https://www.chocolatefinance.com/hk-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-HK" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-MO" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.chocolatefinance.com/hk-zh-hant/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/how-it-works"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/usd-waitlist</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/usd-waitlist"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/usd-waitlist"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/usd-waitlist"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/usd-waitlist"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/usd-waitlist"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/cards-terms-and-conditions</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/cards-terms-and-conditions"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/cards-terms-and-conditions"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/boost-with-usd</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/boost-with-usd"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/boost-with-usd"/>
-        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/boost-with-usd"/>
         <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+    </url>
+    <url>
+        <loc>https://www.chocolatefinance.com/ae-en/boost-with-usd</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+    </url>
+    <url>
+        <loc>https://www.chocolatefinance.com/ae-ar/boost-with-usd</loc>
+        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="ar-AE" href="https://www.chocolatefinance.com/ae-ar/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en-AE" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/ae-en/boost-with-usd"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/visa-card</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/visa-card"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/visa-card"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/visa-card"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/visa-card"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/visa-card"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/cards-campaign-terms-and-conditions</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/cards-campaign-terms-and-conditions"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/cards-campaign-terms-and-conditions"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/in-the-media</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/in-the-media"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/in-the-media"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/in-the-media"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/in-the-media"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/in-the-media"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/customer-stories</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/customer-stories"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/customer-stories"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/customer-stories"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/customer-stories"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/customer-stories"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/fx-guarantee-fee</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/fx-guarantee-fee"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/fx-guarantee-fee"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/language-coming-demo</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/language-coming-demo"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/language-coming-demo"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/language-coming-demo"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/language-coming-demo"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/language-coming-demo"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/terms-and-policy/app-privacy-policy</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/terms-and-policy/app-privacy-policy"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/terms-and-policy/app-privacy-policy"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/terms-and-policy/app-terms-and-conditions</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/terms-and-policy/app-terms-and-conditions"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/terms-and-policy/app-terms-and-conditions"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/terms-and-policy/privacy-policy</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/terms-and-policy/privacy-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/terms-and-policy/privacy-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/terms-and-policy/privacy-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/terms-and-policy/privacy-policy"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/terms-and-policy/privacy-policy"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/best-rates-for-your-cash-singapore"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/best-usd-savings-fd-rates-singapore"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/chocolate-visa-mcc</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mcc"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mcc"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mcc"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mcc"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mcc"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/chocolate-visa-mrt-bus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/cpf-special-account-closure-what-are-the-options-for-investors"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/diy-vs-chocolate-finance-funds"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/how-to-earn-a-passive-income-in-singapore"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/how-to-identify-and-avoid-overspending-habits"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/how-to-save-money-in-singapore"/>
     </url>
-    
     <url>
         <loc>https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/sdic-investment-protection-singapore"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/sgd-vs-usd-investment-opportunity"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/singapore-treasury-bill</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/singapore-treasury-bill"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/singapore-treasury-bill"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/singapore-treasury-bill"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/singapore-treasury-bill"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/singapore-treasury-bill"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/the-importance-of-emergency-funds"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/the-psychology-of-money</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/the-psychology-of-money"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/the-psychology-of-money"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/the-psychology-of-money"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/the-psychology-of-money"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/the-psychology-of-money"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/understanding-how-chocolate-finance-grows-protects-your-money"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/what-is-a-fixed-deposit-singapore"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/why-air-miles-rewards-credit-cards-singapore-2025"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/blogs/why-fixed-deposit-rates-falling"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/alevin-k-chan</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/alevin-k-chan"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/alevin-k-chan"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/alevin-k-chan"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/alevin-k-chan"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/alevin-k-chan"/>
     </url>
-    
     <url>
         <loc>https://www.chocolatefinance.com/author/benjamin-tan</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/benjamin-tan"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/benjamin-tan"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/benjamin-tan"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/benjamin-tan"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/benjamin-tan"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/chocolate-finance</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/chocolate-finance"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/chocolate-finance"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/chocolate-finance"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/chocolate-finance"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/chocolate-finance"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/daniel-tay</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/daniel-tay"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/daniel-tay"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/daniel-tay"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/daniel-tay"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/daniel-tay"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/joanne-poh</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/joanne-poh"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/joanne-poh"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/joanne-poh"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/joanne-poh"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/joanne-poh"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/kang-yen-joon</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/kang-yen-joon"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/kang-yen-joon"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/kang-yen-joon"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/kang-yen-joon"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/kang-yen-joon"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/priscilla-lee</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/priscilla-lee"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/priscilla-lee"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/priscilla-lee"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/priscilla-lee"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/priscilla-lee"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/tim-phillips</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/tim-phillips"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/tim-phillips"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/tim-phillips"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/tim-phillips"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/tim-phillips"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/author/wee-yen-yee</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/author/wee-yen-yee"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/author/wee-yen-yee"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/author/wee-yen-yee"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/author/wee-yen-yee"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/author/wee-yen-yee"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/dimensional-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/dimensional-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/dimensional-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/dimensional-stig-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/dimensional-stig-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/dimensional-stig-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/dimensional-stig-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/dimensional-stig-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/dimensional-stig-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/fullerton-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/fullerton-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/fullerton-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/fullerton-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/fullerton-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/fullerton-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/lion-global-prospectus-and-phs"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/documents/nikkoam-phs</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/nikkoam-phs"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/nikkoam-phs"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/documents/nikkoam-prospectus</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/nikkoam-prospectus"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/nikkoam-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/uobam-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/uobam-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/uobam-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/uobam-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/uobam-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/uobam-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/uobam-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/uobam-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/uobam-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/uobam-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/uobam-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/uobam-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-abrdn-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-abrdn-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-abrdn-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-abrdn-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-abrdn-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-abrdn-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-abrdn-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-abrdn-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-abrdn-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-abrdn-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-abrdn-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-abrdn-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-dimensional-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-dimensional-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-dimensional-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-dimensional-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-dimensional-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-dimensional-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-dimensional-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-dimensional-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-dimensional-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-dimensional-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-fullerton-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-fullerton-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-fullerton-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-fullerton-phs"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-fullerton-prospectus</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-fullerton-prospectus"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-fullerton-prospectus"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-fullerton-prospectus"/>
     </url>
     <url>
         <loc>https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs</loc>
         <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-MY" href="https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-ID" href="https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs"/>
+        <xhtml:link rel="alternate" hreflang="en-BN" href="https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-lion-global-prospectus-and-phs"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/documents/usd-nikko-am-phs</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-nikko-am-phs"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-nikko-am-phs"/>
-    </url>
-    <url>
-        <loc>https://www.chocolatefinance.com/documents/usd-nikko-am-prospectus</loc>
-        <xhtml:link rel="alternate" hreflang="en-SG" href="https://www.chocolatefinance.com/documents/usd-nikko-am-prospectus"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chocolatefinance.com/documents/usd-nikko-am-prospectus"/>
     </url>
 </urlset>

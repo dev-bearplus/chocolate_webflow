@@ -1,0 +1,10 @@
+# Cloudflare Worker
+cloudflare-worker.mjs
+wrangler.toml
+wrangler.jsonc
+wrangler.worker.example.jsonc
+CLOUDFLARE-WORKER-SETUP.md
+
+# Wrangler
+.wrangler/
+node_modules/
