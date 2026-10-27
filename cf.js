@@ -44,9 +44,9 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
                 } else if (hkCountries.includes(countryCode)) {
                     suggestedLang = 'zh-HK';
                 }
-                else if (countryCode === 'AE') {
-                    suggestedLang = 'ar-AE';
-                }
+                // else if (countryCode === 'AE') {
+                //     suggestedLang = 'ar-AE';
+                // }
             } catch (e) {
                 console.error('Geo detect failed', e);
             }
