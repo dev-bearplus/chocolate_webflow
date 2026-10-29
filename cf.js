@@ -2372,6 +2372,191 @@ const mainScript = () => {
     SCRIPT.landingpageScript = () => {
 
     }
+    SCRIPT.happyjarScript = () => {
+        const $page = $('.main[data-barba-namespace="happyjar"]');
+        if (!$page.length) return;
+
+        function happyJarHero() {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            $page.find('.hp-hero-jar').each(function () {
+                const $jar = $(this);
+                const $name = $jar.find('.hp-hero-jar-name').first();
+                if (!$name.length) return;
+
+                const names = String($name.attr('data-typing') || '')
+                    .split(',')
+                    .map(name => name.trim())
+                    .filter(Boolean);
+
+                if (!names.length) return;
+
+                const TYPE_DELAY = 60;
+                const HOLD_DELAY = 1500;
+                const DELETE_DELAY = 30;
+                const AT_PAUSE = 200;
+                const START_DELAY = 1000;
+                let animationVersion = 0;
+
+                $name
+                    .text(names[0])
+                    .attr('aria-hidden', 'true')
+                    .css('display', 'inline-block');
+
+                $jar.attr({
+                    'role': 'group',
+                    'aria-label': `Happy jar name, e.g. ${names[0]}`
+                });
+
+                function setFixedNameWidth() {
+                    const $measure = $name.clone()
+                        .removeAttr('id data-typing aria-hidden')
+                        .css({
+                            position: 'absolute',
+                            top: 0,
+                            left: '-9999px',
+                            display: 'inline-block',
+                            visibility: 'hidden',
+                            width: 'auto',
+                            minWidth: 0,
+                            maxWidth: 'none',
+                            whiteSpace: 'nowrap',
+                            pointerEvents: 'none'
+                        })
+                        .appendTo($jar);
+
+                    let widestNameWidth = 0;
+                    names.forEach(name => {
+                        $measure.text(name);
+                        widestNameWidth = Math.max(
+                            widestNameWidth,
+                            $measure.get(0).getBoundingClientRect().width
+                        );
+                    });
+
+                    $measure.remove();
+                    $name.css('width', `${Math.ceil(widestNameWidth)}px`);
+                }
+
+                function wait(duration) {
+                    return new Promise(resolve => setTimeout(resolve, duration));
+                }
+
+                async function typeName(name, version) {
+                    for (let length = 1; length <= name.length; length++) {
+                        if (version !== animationVersion) return false;
+                        $name.text(name.slice(0, length));
+                        if (length < name.length) await wait(TYPE_DELAY);
+                    }
+                    return version === animationVersion;
+                }
+
+                async function deleteName(version) {
+                    const currentName = $name.text();
+                    for (let length = currentName.length - 1; length >= 0; length--) {
+                        if (version !== animationVersion) return false;
+                        $name.text(currentName.slice(0, length));
+                        if (length > 0) await wait(DELETE_DELAY);
+                    }
+                    return version === animationVersion;
+                }
+
+                async function startTypingLoop() {
+                    const version = ++animationVersion;
+                    $name.text(names[0]);
+
+                    if (reduceMotion.matches) return;
+
+                    let currentIndex = 0;
+                    await wait(START_DELAY);
+
+                    while (version === animationVersion) {
+                        if (!await deleteName(version)) return;
+                        await wait(AT_PAUSE);
+                        if (version !== animationVersion) return;
+
+                        currentIndex = (currentIndex + 1) % names.length;
+                        if (!await typeName(names[currentIndex], version)) return;
+                        await wait(HOLD_DELAY);
+                    }
+                }
+
+                setFixedNameWidth();
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(setFixedNameWidth);
+                }
+                $(window).on('resize.happyjarHero', debounce(setFixedNameWidth, 150));
+
+                const handleMotionPreference = () => startTypingLoop();
+                if (typeof reduceMotion.addEventListener === 'function') {
+                    reduceMotion.addEventListener('change', handleMotionPreference);
+                } else if (typeof reduceMotion.addListener === 'function') {
+                    reduceMotion.addListener(handleMotionPreference);
+                }
+
+                startTypingLoop();
+            });
+        }
+        happyJarHero();
+
+        function happyJarParallax() {
+            const section = $page.find('.hp-jar').get(0);
+            const imageLists = $page.find('.hp-jar-img-list').toArray();
+            if (!section || !imageLists.length) return;
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+            const movement = [
+                { from: 56, to: -56 },
+                { from: -32, to: 32 },
+                { from: 72, to: -72 }
+            ];
+
+            function getDistance(value) {
+                return parseRem(value);
+            }
+
+            function createParallax() {
+                imageLists.forEach((list, index) => {
+                    const range = movement[index % movement.length];
+                    gsap.fromTo(list,
+                        {
+                            y: () => getDistance(range.from),
+                            willChange: 'transform'
+                        },
+                        {
+                            y: () => getDistance(range.to),
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: section,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: 1,
+                                invalidateOnRefresh: true
+                            }
+                        }
+                    );
+                });
+
+                return () => {
+                    gsap.set(imageLists, { clearProps: 'transform,willChange' });
+                };
+            }
+
+            if (typeof gsap.matchMedia === 'function') {
+                const motionMatchMedia = gsap.matchMedia();
+                motionMatchMedia.add(
+                    '(min-width: 992px) and (prefers-reduced-motion: no-preference)',
+                    createParallax
+                );
+            } else if (
+                window.innerWidth >= 992 &&
+                !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ) {
+                createParallax();
+            }
+        }
+        happyJarParallax();
+    }
     SCRIPT.gameScript = () => {
         function gameHeroIntro() {
             let textCir;
