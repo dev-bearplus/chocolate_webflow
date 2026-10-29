@@ -2556,6 +2556,9 @@ const mainScript = () => {
             }
         }
         happyJarParallax();
+
+        animateFaq();
+        scrollToFaq();
     }
     SCRIPT.gameScript = () => {
         function gameHeroIntro() {
