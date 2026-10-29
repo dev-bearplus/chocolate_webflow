@@ -2518,13 +2518,18 @@ const mainScript = () => {
             function createParallax() {
                 imageLists.forEach((list, index) => {
                     const range = movement[index % movement.length];
+
+                    if (window.getComputedStyle(list).position === 'static') {
+                        gsap.set(list, { position: 'relative' });
+                    }
+
                     gsap.fromTo(list,
                         {
-                            y: () => getDistance(range.from),
-                            willChange: 'transform'
+                            top: () => getDistance(range.from),
+                            willChange: 'top'
                         },
                         {
-                            y: () => getDistance(range.to),
+                            top: () => getDistance(range.to),
                             ease: 'none',
                             scrollTrigger: {
                                 trigger: section,
@@ -2536,10 +2541,6 @@ const mainScript = () => {
                         }
                     );
                 });
-
-                return () => {
-                    gsap.set(imageLists, { clearProps: 'transform,willChange' });
-                };
             }
 
             if (typeof gsap.matchMedia === 'function') {
