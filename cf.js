@@ -2372,6 +2372,235 @@ const mainScript = () => {
     SCRIPT.landingpageScript = () => {
 
     }
+    SCRIPT.welcomeScript = () => {
+        const $page = $('.main[data-barba-namespace="welcome"]');
+        if (!$page.length) return;
+
+        function welcomeHero() {
+            const targetEl = $page.find('.wr-hero-rate .mod-circletext').get(0);
+            if (!targetEl) return;
+
+            new CircleType(targetEl);
+            $page.find('.wr-hero-rate .mod-circletext').css('display', 'flex');
+            $page.find('.wr-hero-rate .text-cir-wrap').addClass('anim-rotate');
+        }
+        welcomeHero();
+
+        function welcomeTesti() {
+            const $testi = $page.find('.wr-testi-wrap');
+            if (!$testi.length) return;
+
+            $testi.find('.home-testi-item').each(function () {
+                const rate = Number($(this).find('.data-rate').text());
+                const $stars = $(this).find('.ic-star');
+
+                for (let index = 0; index < rate; index++) {
+                    $stars.eq(index).addClass('rate-true');
+                }
+            });
+
+            if ($(window).width() > 991) {
+                const $testiMain = $testi.find('.home-testi-main');
+                const $leftColumn = $testi.find('.home-testi-col-inner.mod-left');
+                const $rightColumn = $testi.find('.home-testi-col-inner.mod-right');
+                const frameHeight = $testiMain.height();
+                const columnsHeight = Math.max(
+                    $leftColumn.outerHeight() || 0,
+                    $rightColumn.outerHeight() || 0
+                );
+                const distanceVal = Math.max(columnsHeight - frameHeight, 0);
+
+                $testiMain
+                    .on('mouseenter', function () {
+                        if (!isScrolling) lenis.stop();
+                    })
+                    .on('mouseleave', function () {
+                        if (!isScrolling) lenis.start();
+                    });
+
+                if (distanceVal > 0) {
+                    const testiTimeline = gsap.timeline({ paused: true });
+                    testiTimeline
+                        .to($testi.find('.home-testi-bar-inner'), { scaleX: 1, ease: 'none' })
+                        .fromTo($leftColumn, { yPercent: 0 }, { y: -distanceVal, ease: 'none' }, 0)
+                        .fromTo($rightColumn, { yPercent: 0 }, { y: distanceVal, ease: 'none' }, 0);
+
+                    let currentProgress = 0;
+                    $testiMain.on('wheel', function (event) {
+                        currentProgress = gsap.utils.clamp(
+                            0,
+                            distanceVal,
+                            currentProgress + event.originalEvent.deltaY
+                        );
+
+                        gsap.to(testiTimeline, {
+                            duration: .8 * gsap.utils.clamp(
+                                .5,
+                                1,
+                                Math.abs(event.originalEvent.deltaY / 110)
+                            ),
+                            progress: currentProgress / distanceVal,
+                            ease: Power2.easeOut,
+                            overwrite: true
+                        });
+                    });
+                }
+            } else {
+                const swiperEl = $testi.find('.swiper.home-testi-col-wrapper').get(0);
+                if (swiperEl) {
+                    new Swiper(swiperEl, {
+                        slidesPerView: 'auto',
+                        spaceBetween: 1.6 * unit,
+                        breakpoints: {
+                            767: {
+                                slidesPerView: 2
+                            }
+                        }
+                    });
+                }
+
+                $testi.find('.home-testi-col-wrapper .load-ske').removeClass('load-ske');
+            }
+        }
+        welcomeTesti();
+
+        function welcomeTestiCoinParallax() {
+            const section = $page.find('.wr-testi-wrap').get(0);
+            const coins = $page.find('.wr-testi-coin').toArray();
+            if (!section || !coins.length) return;
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+            const movement = [
+                { from: 12, to: -12 },
+                { from: -8, to: 10 },
+                { from: 16, to: -10 },
+                { from: -12, to: 14 },
+                { from: 10, to: -16 }
+            ];
+
+            const createParallax = () => {
+                const tween = gsap.fromTo(coins,
+                    {
+                        yPercent: index => movement[index % movement.length].from,
+                        force3D: true,
+                        willChange: 'transform'
+                    },
+                    {
+                        yPercent: index => movement[index % movement.length].to,
+                        force3D: true,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: 1,
+                            invalidateOnRefresh: true
+                        }
+                    }
+                );
+
+                return () => {
+                    if (tween.scrollTrigger) tween.scrollTrigger.kill();
+                    tween.kill();
+                    gsap.set(coins, { clearProps: 'transform,willChange' });
+                };
+            };
+
+            if (typeof gsap.matchMedia === 'function') {
+                const motionMatchMedia = gsap.matchMedia();
+                motionMatchMedia.add('(prefers-reduced-motion: no-preference)', createParallax);
+            } else if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                createParallax();
+            }
+        }
+        welcomeTestiCoinParallax();
+
+        function welcomeReviewTableTabs() {
+            $page.find('.wr-review-item-content').each(function (groupIndex) {
+                const $reviewItem = $(this);
+                const $buttons = $reviewItem.find('.wr-review-item-btn');
+                const $tables = $reviewItem.find('.wr-review-item-table');
+                if (!$buttons.length || !$tables.length) return;
+
+                const activeButtonIndex = $buttons.index($buttons.filter('.active').first());
+                const initialIndex = activeButtonIndex >= 0 && activeButtonIndex < $tables.length
+                    ? activeButtonIndex
+                    : 0;
+                const fadeDuration = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    ? 0
+                    : 150;
+
+                $buttons.each(function (index) {
+                    const panelId = `welcome-review-panel-${groupIndex}-${index}`;
+                    $(this).attr({
+                        'aria-controls': panelId,
+                        'aria-expanded': index === initialIndex ? 'true' : 'false'
+                    });
+                    $tables.eq(index).attr('id', panelId);
+                });
+
+                $buttons.removeClass('active').eq(initialIndex).addClass('active');
+                $tables
+                    .hide()
+                    .removeClass('active')
+                    .attr('aria-hidden', 'true')
+                    .eq(initialIndex)
+                    .show()
+                    .addClass('active')
+                    .attr('aria-hidden', 'false');
+
+                $buttons.on('click', function (event) {
+                    event.preventDefault();
+
+                    const index = $buttons.index(this);
+                    const $targetTable = $tables.eq(index);
+                    if (!$targetTable.length || $(this).hasClass('active')) return;
+
+                    $buttons
+                        .removeClass('active')
+                        .attr('aria-expanded', 'false');
+                    $(this)
+                        .addClass('active')
+                        .attr('aria-expanded', 'true');
+
+                    const $currentTable = $tables.filter('.active').not($targetTable).first();
+                    const showTargetTable = () => {
+                        $tables
+                            .not($targetTable)
+                            .hide()
+                            .removeClass('active')
+                            .attr('aria-hidden', 'true');
+
+                        $targetTable
+                            .stop(true, false)
+                            .hide()
+                            .addClass('active')
+                            .attr('aria-hidden', 'false');
+
+                        if (fadeDuration === 0) {
+                            $targetTable.show();
+                        } else {
+                            $targetTable.fadeIn(fadeDuration);
+                        }
+                    };
+
+                    if (!$currentTable.length || fadeDuration === 0) {
+                        $currentTable.hide().removeClass('active').attr('aria-hidden', 'true');
+                        showTargetTable();
+                        return;
+                    }
+
+                    $currentTable
+                        .stop(true, false)
+                        .fadeOut(fadeDuration, function () {
+                            $(this).removeClass('active').attr('aria-hidden', 'true');
+                            showTargetTable();
+                        });
+                });
+            });
+        }
+        welcomeReviewTableTabs();
+    }
     SCRIPT.happyjarScript = () => {
         const $page = $('.main[data-barba-namespace="happyjar"]');
         if (!$page.length) return;
