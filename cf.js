@@ -354,13 +354,59 @@ const mainScript = () => {
         };
     }
     function initChatbox() {
-        let lang = $('html').attr('lang');
+        const lang = $('html').attr('lang');
+
+        // Staging (webflow.io) runs Fini (usefini); production stays on Zendesk
+        // until Fini is signed off. isStagging() decides which one loads.
+        if (isStagging()) {
+            // One Fini config per market. en-SG uses the current widget; fill the
+            // other markets with each snippet Liam sends (keep at least widgetId).
+            // Docs: https://docs.usefini.com/integrations/fini-standalone-chat
+            const FINI_OPTIONS = {
+                'en-SG': {
+                    widgetId: "2gKutKZsai",
+                    mode: "widget",     // "widget" | "standalone"
+                    customerToken: "",  // Optional JWT
+                    notifications: {
+                        sound: true,      // play a ding on new messages
+                        browser: "ask",   // "never" | "ask" | "always"
+                        pulse: true,      // bubble pulse animation when closed
+                    },
+                },
+                'en-HK': null, // TODO: { widgetId: '...' }
+                'zh-HK': null, // TODO: { widgetId: '...' }
+                'en-AE': null, // TODO: { widgetId: '...' }
+                'ar-AE': null, // TODO: { widgetId: '...' }
+            };
+
+            const options = FINI_OPTIONS[lang];
+            if (!options || !options.widgetId) return;
+
+            // Fini loader: inject the widget script + root node, then init.
+            (function (w, d, s, o, f, js, fjs) {
+                if (d.getElementById(o)) return; // guard against double-inject
+                js = d.createElement(s);
+                fjs = d.getElementsByTagName(s)[0];
+                js.id = o;
+                js.src = f;
+                js.async = 1;
+                fjs.parentNode.insertBefore(js, fjs);
+                js = d.createElement('div');
+                js.id = 'fini-widget-root';
+                d.body.appendChild(js);
+                w.finiWidgetOptions = options;
+            })(window, document, 'script', 'FiniWidget', 'https://storage.googleapis.com/fini-widget/assets/fini-widget-prod.min.js');
+
+            console.log('Fini chatbox initialized:', lang);
+            return;
+        }
+
+        // Production: Zendesk chat widget, keyed per market.
         let key = '';
         if (lang == 'en-HK' || lang == 'zh-HK') {
-            key = '39299081-8fb6-4a91-9e77-2feea792353b'
-        }
-        else if (lang == 'en-SG') {
-            key = '828c3b01-7155-4ead-9114-3d244832fa64'
+            key = '39299081-8fb6-4a91-9e77-2feea792353b';
+        } else if (lang == 'en-SG') {
+            key = '828c3b01-7155-4ead-9114-3d244832fa64';
         }
         if (key != '') {
             $('<script/>', {
@@ -1327,6 +1373,7 @@ const mainScript = () => {
         })
     }
     function updateInterestRateLive(wrapper) {
+        let SGDbigBizRate = $('[data-rate-source-biz-sgd="big"]').text();
         let SGDbigRate = $('[data-rate-source-sgd="big"]').text();
         let SGDmediumRate = $('[data-rate-source-sgd="medium"]').text();
         let SGDsmallRate = $('[data-rate-source-sgd="small"]').text();
@@ -1339,6 +1386,13 @@ const mainScript = () => {
         let SGDminimumsum = $('[data-rate-source-sgd="minimum-sum"]').text();
 
         let SGDallRates = $(wrapper).find('[data-rate-sgd]');
+        let SGDallBizRate = $(wrapper).find('[data-rate-biz-sgd]');
+        SGDallBizRate.each(function (e) {
+            let type = $(this).attr('data-rate-biz-sgd');
+            if (type == 'big') {
+                $(this).text(SGDbigBizRate)
+            }
+        })
         SGDallRates.each(function (e) {
             let type = $(this).attr('data-rate-sgd');
             if (type == 'big') {
@@ -1410,10 +1464,11 @@ const mainScript = () => {
         let allLink = wrapper.find('a')
 
         allLink.each(function (idx, item) {
-            let href = $(item).attr('href')
-            if (href.includes('https://[data-rate')) {
-                let type = href.replace('https://', '').replace('http://', '').replace('[data-rate-', '').replace(']', '').includes('usd') ? 'usd' : 'sgd'
-                let rate = href.replace('https://', '').replace('http://', '').replace(`[data-rate-${type}=`, '').replace(']', '')
+            const href = $(item).attr('href') || '';
+            const rateMatch = href.match(/\[(data-rate-(?:biz-sgd|sgd|usd))=([^\]]+)\]/i);
+            if (rateMatch) {
+                const attributeName = rateMatch[1].toLowerCase();
+                const rate = rateMatch[2];
                 let newDom = $('<span></span>');
                 if ($(item).html().includes('strong')) {
                     newDom = $('<strong></strong>');
@@ -1421,7 +1476,7 @@ const mainScript = () => {
 
                 let span = newDom
                     .html($(item).html())
-                    .attr(`data-rate-${type}`, rate);
+                    .attr(attributeName, rate);
                 $(item).replaceWith(span);
             }
         })
