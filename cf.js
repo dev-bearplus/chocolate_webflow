@@ -359,32 +359,26 @@ const mainScript = () => {
         // Staging (webflow.io) runs Fini (usefini); production stays on Zendesk
         // until Fini is signed off. isStagging() decides which one loads.
         if (isStagging()) {
-            // One Fini config per market. en-SG uses the current widget; fill the
-            // other markets with each snippet Liam sends (keep at least widgetId).
+            // Fini (usefini) widget, one widgetId per market (snippets from Liam).
+            // HK shares one widget across en-HK/zh-HK; AE shares one across en-AE/ar-AE.
             // Docs: https://docs.usefini.com/integrations/fini-standalone-chat
-            const FINI_OPTIONS = {
-                'en-SG': {
-                    widgetId: "2gKutKZsai",
-                    mode: "widget",     // "widget" | "standalone"
-                    customerToken: "",  // Optional JWT
-                    notifications: {
-                        sound: true,      // play a ding on new messages
-                        browser: "ask",   // "never" | "ask" | "always"
-                        pulse: true,      // bubble pulse animation when closed
-                    },
-                },
-                'en-HK': null, // TODO: { widgetId: '...' }
-                'zh-HK': null, // TODO: { widgetId: '...' }
-                'en-AE': null, // TODO: { widgetId: '...' }
-                'ar-AE': null, // TODO: { widgetId: '...' }
+            const FINI_WIDGET_ID = {
+                'en-SG': '2gKutKZsai',
+                'en-HK': 'aG3Bp6wNV8',
+                'zh-HK': 'aG3Bp6wNV8',
+                'en-AE': 'w6REHvumJ2',
+                'ar-AE': 'w6REHvumJ2',
             };
 
-            const options = FINI_OPTIONS[lang];
-            if (!options || !options.widgetId) return;
+            const widgetId = FINI_WIDGET_ID[lang];
+            if (!widgetId) return;
 
-            // Fini loader: inject the widget script + root node, then init.
+            // Fini loader: queue stub, inject the widget script + root node, then init.
             (function (w, d, s, o, f, js, fjs) {
                 if (d.getElementById(o)) return; // guard against double-inject
+                w.fini = w.fini || function () {
+                    (w.fini.q = w.fini.q || []).push(arguments);
+                };
                 js = d.createElement(s);
                 fjs = d.getElementsByTagName(s)[0];
                 js.id = o;
@@ -394,10 +388,19 @@ const mainScript = () => {
                 js = d.createElement('div');
                 js.id = 'fini-widget-root';
                 d.body.appendChild(js);
-                w.finiWidgetOptions = options;
+                w.finiWidgetOptions = {
+                    widgetId: widgetId,
+                    mode: 'widget',     // "widget" | "standalone"
+                    customerToken: '',  // Optional JWT
+                    notifications: {
+                        sound: true,      // play a ding on new messages
+                        browser: 'ask',   // "never" | "ask" | "always"
+                        pulse: true,      // bubble pulse animation when closed
+                    },
+                };
             })(window, document, 'script', 'FiniWidget', 'https://storage.googleapis.com/fini-widget/assets/fini-widget-prod.min.js');
 
-            console.log('Fini chatbox initialized:', lang);
+            console.log('Fini chatbox initialized:', lang, widgetId);
             return;
         }
 
