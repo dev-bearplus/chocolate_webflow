@@ -355,70 +355,46 @@ const mainScript = () => {
     }
     function initChatbox() {
         const lang = $('html').attr('lang');
+        const FINI_WIDGET_ID = {
+            'en-SG': '2gKutKZsai',
+            'en-HK': 'aG3Bp6wNV8',
+            'zh-HK': 'aG3Bp6wNV8',
+            'en-AE': 'w6REHvumJ2',
+            'ar-AE': 'w6REHvumJ2',
+        };
 
-        // Staging (webflow.io) runs Fini (usefini); production stays on Zendesk
-        // until Fini is signed off. isStagging() decides which one loads.
-        if (isStagging()) {
-            // Fini (usefini) widget, one widgetId per market (snippets from Liam).
-            // HK shares one widget across en-HK/zh-HK; AE shares one across en-AE/ar-AE.
-            // Docs: https://docs.usefini.com/integrations/fini-standalone-chat
-            const FINI_WIDGET_ID = {
-                'en-SG': '2gKutKZsai',
-                'en-HK': 'aG3Bp6wNV8',
-                'zh-HK': 'aG3Bp6wNV8',
-                'en-AE': 'w6REHvumJ2',
-                'ar-AE': 'w6REHvumJ2',
+        const widgetId = FINI_WIDGET_ID[lang];
+        if (!widgetId) return;
+
+        // Fini loader: queue stub, inject the widget script + root node, then init.
+        (function (w, d, s, o, f, js, fjs) {
+            if (d.getElementById(o)) return; // guard against double-inject
+            w.fini = w.fini || function () {
+                (w.fini.q = w.fini.q || []).push(arguments);
             };
+            js = d.createElement(s);
+            fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+            js = d.createElement('div');
+            js.id = 'fini-widget-root';
+            d.body.appendChild(js);
+            w.finiWidgetOptions = {
+                widgetId: widgetId,
+                mode: 'widget',     // "widget" | "standalone"
+                customerToken: '',  // Optional JWT
+                notifications: {
+                    sound: true,      // play a ding on new messages
+                    browser: 'ask',   // "never" | "ask" | "always"
+                    pulse: true,      // bubble pulse animation when closed
+                },
+            };
+        })(window, document, 'script', 'FiniWidget', 'https://storage.googleapis.com/fini-widget/assets/fini-widget-prod.min.js');
 
-            const widgetId = FINI_WIDGET_ID[lang];
-            if (!widgetId) return;
-
-            // Fini loader: queue stub, inject the widget script + root node, then init.
-            (function (w, d, s, o, f, js, fjs) {
-                if (d.getElementById(o)) return; // guard against double-inject
-                w.fini = w.fini || function () {
-                    (w.fini.q = w.fini.q || []).push(arguments);
-                };
-                js = d.createElement(s);
-                fjs = d.getElementsByTagName(s)[0];
-                js.id = o;
-                js.src = f;
-                js.async = 1;
-                fjs.parentNode.insertBefore(js, fjs);
-                js = d.createElement('div');
-                js.id = 'fini-widget-root';
-                d.body.appendChild(js);
-                w.finiWidgetOptions = {
-                    widgetId: widgetId,
-                    mode: 'widget',     // "widget" | "standalone"
-                    customerToken: '',  // Optional JWT
-                    notifications: {
-                        sound: true,      // play a ding on new messages
-                        browser: 'ask',   // "never" | "ask" | "always"
-                        pulse: true,      // bubble pulse animation when closed
-                    },
-                };
-            })(window, document, 'script', 'FiniWidget', 'https://storage.googleapis.com/fini-widget/assets/fini-widget-prod.min.js');
-
-            console.log('Fini chatbox initialized:', lang, widgetId);
-            return;
-        }
-
-        // Production: Zendesk chat widget, keyed per market.
-        let key = '';
-        if (lang == 'en-HK' || lang == 'zh-HK') {
-            key = '39299081-8fb6-4a91-9e77-2feea792353b';
-        } else if (lang == 'en-SG') {
-            key = '828c3b01-7155-4ead-9114-3d244832fa64';
-        }
-        if (key != '') {
-            $('<script/>', {
-                id: 'ze-snippet',
-                src: `https://static.zdassets.com/ekr/snippet.js?key=${key}`,
-                async: true
-            }).appendTo('body');
-            console.log('chatbox initialized');
-        }
+        console.log('Fini chatbox initialized:', lang, widgetId);
+        return;
     }
     initChatbox();
     function isInViewport(el) {
