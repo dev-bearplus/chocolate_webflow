@@ -688,23 +688,30 @@ const mainScript = () => {
         })
 
         if ($('.faq-page').length) {
-            $('.home-faq-item-body .span-txt-link').on('click', function (e) {
+            $('.home-faq-item-body a').on('click', function (e) {
                 let target = $(this).attr('href');
-                if (target.includes(`${window.location.pathname}`)) {
+                if (!target) return;
+                let url = new URL(target, window.location.origin);
+                if (url.pathname === window.location.pathname) {
                     e.preventDefault();
-                    let newTarget = new URL(target).searchParams.get('id')
-
-                    $(`#${newTarget}`).find('.home-faq-item-head').trigger('click');
-                    setTimeout(() => {
-                        lenis.scrollTo(`#${newTarget}`, { offset: -$(window).height() / 2 })
-                    }, 200);
+                    let newTarget = url.searchParams.get('id')
+                    if (newTarget && $(`#${newTarget}`).length) {
+                        let faqItem = $(`#${newTarget}`);
+                        if (!faqItem.find('.home-faq-item-body').is(':visible')) {
+                            faqItem.find('.home-faq-item-head').trigger('click');
+                        }
+                        setTimeout(() => {
+                            lenis.scrollTo(`#${newTarget}`, { offset: -$(window).height() / 2 })
+                        }, 200);
+                    }
                 }
             })
         } else {
-            $('.home-faq-item-body .span-txt-link').on('click', function (e) {
+            $('.home-faq-item-body a').on('click', function (e) {
                 let target = $(this).attr('href');
-                let url = new URL(target);
-                if (window.location.origin == url.origin) {
+                if (!target) return;
+                let url = new URL(target, window.location.origin);
+                if (url.origin === window.location.origin) {
                     e.preventDefault();
                     let newURL = `${window.location.origin}${url.pathname}${url.search}`
                     if ($(this).attr('target') == '_blank') {
