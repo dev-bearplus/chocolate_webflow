@@ -87,14 +87,16 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
 
         console.log('targetUrl', targetUrl);
 
-        if (_isStaging && !sessionStorage.getItem('regionBannerDismissed')) {
-            window.__regionSuggestion = {
-                suggestedLang: storedSubdomain,
-                currentLang: currentLang,
-                targetUrl: targetUrl,
-                langSubDomain: langSubDomain,
-                countryCode: detectedCountryCode
-            };
+        if (_isStaging) {
+            if (!sessionStorage.getItem('regionBannerDismissed')) {
+                window.__regionSuggestion = {
+                    suggestedLang: storedSubdomain,
+                    currentLang: currentLang,
+                    targetUrl: targetUrl,
+                    langSubDomain: langSubDomain,
+                    countryCode: detectedCountryCode
+                };
+            }
             return;
         }
 
