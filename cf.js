@@ -1055,6 +1055,7 @@ const mainScript = () => {
         headerScrollThreshold = header.height() || 0;
         if ($announcement.length) headerScrollThreshold += $announcement.height() || 0;
         if ($topbar.length) headerScrollThreshold = (header.height() || 0) + ($topbar.height() || 0);
+        if ($('.region.active').length) headerScrollThreshold += $('.region.active').outerHeight() || 0;
     }
     updateHeaderScrollThreshold();
     $(window).on('resize', debounce(updateHeaderScrollThreshold));
@@ -1399,6 +1400,11 @@ const mainScript = () => {
                     $('.sticky-wrap').addClass('on-open');
                     $('.body').css('--open-top', `${$('.topbar').outerHeight() * -1}px`)
                 }
+                if ($('.region.active').length) {
+                    $('.sticky-wrap').addClass('on-open');
+                    var topOffset = ($('.topbar').length ? $('.topbar').outerHeight() : 0) + ($('.region.active').outerHeight() || 0);
+                    $('.body').css('--open-top', `${topOffset * -1}px`)
+                }
                 if (!isTouchDevice()) {
                     lenis.stop();
                 } else {
@@ -1440,9 +1446,8 @@ const mainScript = () => {
                     }, 300);
                     $('.header').removeClass('on-open');
                 }
-                if ($('.topbar').length || $('.announcement').length) {
+                if ($('.topbar').length || $('.announcement').length || $('.region.active').length) {
                     $('.sticky-wrap').removeClass('on-open');
-                    // $('.body').css('--open-top', `0px`)
                 }
                 if (!isTouchDevice()) {
                     lenis.start();
