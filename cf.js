@@ -476,20 +476,28 @@ const mainScript = () => {
         // Dropdown toggle
         var $market = $region.find('.region-market');
         var $dropdownWrap = $region.find('.region-market-dropdown-wrap');
+        var $regionOverlay = $('.region-overlay');
+
+        function closeBannerDropdown() {
+            $dropdownWrap.removeClass('active');
+            $regionOverlay.removeClass('active');
+        }
+
         $market.on('click', function (e) {
             if ($(e.target).closest('.region-market-dropdown-wrap').length) return;
             e.preventDefault();
             $dropdownWrap.toggleClass('active');
+            $regionOverlay.toggleClass('active');
         });
 
-        bindRegionLangClicks($region, currentLang, function () {
-            $dropdownWrap.removeClass('active');
-        });
+        $regionOverlay.on('click', closeBannerDropdown);
+
+        bindRegionLangClicks($region, currentLang, closeBannerDropdown);
 
         // Close dropdown on outside click
         $(document).on('click', function (e) {
             if (!$(e.target).closest('.region-market').length) {
-                $dropdownWrap.removeClass('active');
+                closeBannerDropdown();
             }
         });
     }
