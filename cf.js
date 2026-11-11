@@ -516,9 +516,13 @@ const mainScript = () => {
         // Populate dropdown items with current state + href
         populateRegionDropdown($dropdownItems, currentLang, null);
 
-        // Update header button text — "Singapore · EN"
+        // Update header button text — desktop: "Singapore · EN", mobile: "EN"
         var currentLangShort = currentLang.split('-')[0].toUpperCase();
-        $('.header-lang-txt').text(currentRegion.name + ' · ' + currentLangShort);
+        if ($(window).width() <= 991) {
+            $('.header-lang-txt').text(currentLangShort);
+        } else {
+            $('.header-lang-txt').text(currentRegion.name + ' · ' + currentLangShort);
+        }
 
         // Toggle dropdown on button click
         $langBtn.on('click', function (e) {
