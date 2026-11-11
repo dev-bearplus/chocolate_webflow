@@ -422,6 +422,8 @@ const mainScript = () => {
 
         if (!hasSuggestion) return;
 
+        sessionStorage.setItem('regionBannerDismissed', '1');
+
         var currentLang = suggestion.currentLang;
         var suggestedLang = suggestion.suggestedLang;
         var currentRegionId = LANG_TO_REGION[currentLang] || 'sg';
