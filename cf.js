@@ -5,17 +5,23 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
     if (isLikelyBot) return;
 
     if (window.location.pathname === '/programmes' && $('html').attr('lang') === 'en-SG') {
-        window.location.href = '/404';
+        window.location.href = '/';
     }
+
+    const _isStaging = window.location.href.includes('webflow.io');
+
     let currentLang = document.documentElement.lang || 'en-SG';
     const pathname = window.location.pathname;
     const isRootHomepage = pathname === '/' || pathname === '';
     let currentSubdomain = localStorage.getItem('currentSubdomain');
     let checkDomain = '';
-    if (!currentSubdomain && isRootHomepage) {
+    let detectedCountryCode = '';
+    if (!currentSubdomain && (_isStaging || isRootHomepage)) {
         const cachedSuggestedLang = sessionStorage.getItem('geoSuggestedLang');
+        const cachedCountryCode = sessionStorage.getItem('geoCountryCode');
         if (cachedSuggestedLang) {
             checkDomain = cachedSuggestedLang;
+            detectedCountryCode = cachedCountryCode || '';
         } else {
             let suggestedLang = 'en-AE';
             try {
@@ -47,11 +53,13 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
                 // else if (countryCode === 'AE') {
                 //     suggestedLang = 'ar-AE';
                 // }
+                detectedCountryCode = countryCode;
             } catch (e) {
                 console.error('Geo detect failed', e);
             }
             checkDomain = suggestedLang;
             sessionStorage.setItem('geoSuggestedLang', suggestedLang);
+            sessionStorage.setItem('geoCountryCode', detectedCountryCode);
         }
         // Keep the automatic suggestion session-scoped; an explicit language
         // selection still uses currentSubdomain in localStorage.
@@ -78,6 +86,18 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
             : `${baseUrl}/${cleanPathname}${search}${hash}`;
 
         console.log('targetUrl', targetUrl);
+
+        if (_isStaging && !sessionStorage.getItem('regionBannerDismissed')) {
+            window.__regionSuggestion = {
+                suggestedLang: storedSubdomain,
+                currentLang: currentLang,
+                targetUrl: targetUrl,
+                langSubDomain: langSubDomain,
+                countryCode: detectedCountryCode
+            };
+            return;
+        }
+
         try {
             // Only verify that the destination exists. A GET would download the
             // whole page here and then download it again after the redirect.
@@ -278,13 +298,261 @@ const mainScript = () => {
 
     }
     activeLanguage();
+
+    // ── Region / language helpers ──
+    var REGIONS = [
+        { id: 'sg', name: 'Singapore', languages: [{ code: 'en-SG', label: 'English', subdomain: '' }] },
+        { id: 'ae', name: 'UAE', languages: [{ code: 'en-AE', label: 'English', subdomain: 'ae-en' }, { code: 'ar-AE', label: 'العربية', subdomain: 'ae-ar' }] },
+        { id: 'hk', name: 'Hong Kong', languages: [{ code: 'en-HK', label: 'English', subdomain: 'hk-en' }, { code: 'zh-HK', label: '繁體中文', subdomain: 'hk-zh-hant' }] }
+    ];
+    var LANG_TO_REGION = { 'en-SG': 'sg', 'en-AE': 'ae', 'ar-AE': 'ae', 'en-HK': 'hk', 'zh-HK': 'hk' };
+
+    function buildLangUrl(subdomain) {
+        var baseUrl = window.location.origin;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        var cleanPathname = window.location.pathname.replace(/^\/(hk-zh-hant|hk-en|ae-ar|ae-en)(\/|$)/, '').replace(/^\/+/, '');
+        return subdomain
+            ? baseUrl + '/' + subdomain + (cleanPathname ? '/' + cleanPathname : '') + search + hash
+            : baseUrl + '/' + cleanPathname + search + hash;
+    }
+
+    var _isStagingSwitcher = window.location.href.includes('webflow.io');
+    var ALLOWED_ROUTES = {
+        hk: _isStagingSwitcher
+            ? ['programmes', 'privacy-policy', 'app-terms-and-conditions', 'app-risk-disclosures', 'app-fund-documents', '/documents', 'faqs', 'about-us', 'waitlist', 'contact-us', 'how-it-works', 'blog-new', 'blog', '/blogs']
+            : ['programmes', 'privacy-policy', 'app-terms-and-conditions', 'app-risk-disclosures', 'app-fund-documents', '/documents', 'faqs', 'about-us', 'waitlist', 'contact-us', 'how-it-works', 'blog', '/blogs'],
+        ae: _isStagingSwitcher
+            ? ['waitlist', 'about-us', 'app-terms-and-conditions', 'privacy', 'prospectus', 'chocolate-global-incom-fund-kiid', 'how-it-works', 'boost-with-usd', 'contact-us', 'faqs', 'app-fund-documents']
+            : ['waitlist', 'about-us', 'app-terms-and-conditions', 'privacy', 'prospectus', 'chocolate-global-incom-fund-kiid', 'how-it-works', 'boost-with-usd', 'contact-us', 'faqs', 'app-fund-documents']
+    };
+
+    function isRouteAllowed(regionId, cleanPath) {
+        if (regionId === 'sg') return true;
+        var routes = ALLOWED_ROUTES[regionId];
+        if (!routes) return true;
+        if (!cleanPath || cleanPath === '/') return true;
+        var lastSegment = cleanPath.replace(/^\/+/, '').split('/').pop();
+        if (!lastSegment) return true;
+        return routes.some(function (route) {
+            return route.startsWith('/') ? cleanPath.includes(route) : lastSegment === route;
+        });
+    }
+
+    function switchToLang(langCode, subdomain) {
+        var targetUrl = buildLangUrl(subdomain);
+        var homepageUrl = window.location.origin + '/' + (subdomain || '');
+        var cleanPath = window.location.pathname.replace(/^\/(hk-zh-hant|hk-en|ae-ar|ae-en)(\/|$)/, '').replace(/^\/+/, '');
+        var targetRegionId = LANG_TO_REGION[langCode] || 'sg';
+
+        localStorage.setItem('currentSubdomain', langCode);
+
+        if (isRouteAllowed(targetRegionId, cleanPath)) {
+            window.location.replace(targetUrl);
+        } else {
+            sessionStorage.setItem('regionFallbackNotice', '1');
+            window.location.replace(homepageUrl);
+        }
+    }
+
+    function populateRegionDropdown($items, currentLang, suggestedRegionId) {
+        var currentRegionId = LANG_TO_REGION[currentLang] || 'sg';
+        $items.each(function (index) {
+            var region = REGIONS[index];
+            if (!region) return;
+            var $item = $(this);
+            var isCurrent = region.id === currentRegionId;
+            $item.toggleClass('current', isCurrent);
+            $item.toggleClass('active', region.id === suggestedRegionId);
+            $item.find('.region-market-dropdown-item-title').text(region.name);
+            $item.find('.region-market-dropdown-item-current').toggle(isCurrent);
+
+            var $langItems = $item.find('.region-market-dropdown-item-lang');
+            region.languages.forEach(function (lang, langIdx) {
+                var $langItem = $langItems.eq(langIdx);
+                $langItem.find('.txt-14').text(lang.label);
+                $langItem.attr('data-lang-code', lang.code);
+                $langItem.attr('data-lang-subdomain', lang.subdomain);
+                $langItem.attr('href', buildLangUrl(lang.subdomain));
+                $langItem.toggleClass('active', lang.code === currentLang);
+            });
+        });
+    }
+
+    function bindRegionLangClicks($scope, currentLang, onSameLang) {
+        $scope.find('.region-market-dropdown-item-lang').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var langCode = $(this).attr('data-lang-code');
+            if (langCode === currentLang) {
+                onSameLang();
+                return;
+            }
+            switchToLang(langCode, $(this).attr('data-lang-subdomain'));
+        });
+    }
+
+    // ── Region Suggestion Banner (staging only) ──
+    function initRegionBanner() {
+        var $region = $('.region');
+        if (!$region.length) return;
+
+        var hasFallback = false;
+        if (sessionStorage.getItem('regionFallbackNotice')) {
+            sessionStorage.removeItem('regionFallbackNotice');
+            $region.addClass('active fallback');
+            hasFallback = true;
+        }
+
+        var suggestion = window.__regionSuggestion;
+        var hasSuggestion = suggestion && !sessionStorage.getItem('regionBannerDismissed');
+
+        if (!hasFallback && !hasSuggestion) return;
+
+        $region.addClass('active');
+
+        // Fallback-only close handler
+        $region.find('.region-fallback .region-close').on('click', function (e) {
+            e.preventDefault();
+            $region.removeClass('fallback');
+            if (!hasSuggestion) {
+                $region.removeClass('active');
+            }
+        });
+
+        if (!hasSuggestion) return;
+
+        var currentLang = suggestion.currentLang;
+        var suggestedLang = suggestion.suggestedLang;
+        var currentRegionId = LANG_TO_REGION[currentLang] || 'sg';
+        var suggestedRegionId = LANG_TO_REGION[suggestedLang] || 'ae';
+        var suggestedRegion = REGIONS.find(function (r) { return r.id === suggestedRegionId; });
+        var suggestedIdx = REGIONS.findIndex(function (r) { return r.id === suggestedRegionId; });
+
+        if (!suggestedRegion || currentRegionId === suggestedRegionId) {
+            if (!hasFallback) $region.removeClass('active');
+            return;
+        }
+
+        var suggestedDefaultLang = suggestedRegion.languages[0];
+
+        // -- Populate banner content --
+        var countryNames = {
+            'SG': 'Singapore', 'MY': 'Malaysia', 'ID': 'Indonesia', 'BN': 'Brunei',
+            'HK': 'Hong Kong', 'MO': 'Macau', 'CN': 'China',
+            'AE': 'UAE', 'VN': 'Vietnam', 'TH': 'Thailand', 'PH': 'Philippines',
+            'JP': 'Japan', 'KR': 'South Korea', 'TW': 'Taiwan', 'IN': 'India',
+            'US': 'United States', 'GB': 'United Kingdom', 'AU': 'Australia'
+        };
+        var detectedCountry = countryNames[suggestion.countryCode] || suggestion.countryCode || 'your location';
+        $region.find('.span-location').text(detectedCountry);
+
+        var $dropdownItems = $region.find('.region-market-dropdown-item');
+        var suggestedFlag = $dropdownItems.eq(suggestedIdx).find('.region-market-dropdown-item-ic .img-basic').attr('src');
+        $region.find('.region-market-flag .img-basic').attr('src', suggestedFlag);
+        $region.find('.region-market-inner .txt-16.txt-med').text(suggestedRegion.name + ' · ' + suggestedDefaultLang.label);
+
+        $region.find('.region-fallback-title').text(
+            "That page isn't available in " + suggestedRegion.name + " yet, so we've brought you to the " + suggestedRegion.name + " homepage."
+        );
+
+        populateRegionDropdown($dropdownItems, currentLang, suggestedRegionId);
+
+        // -- Event listeners --
+
+        // Close banner
+        $region.find('.region-content > .region-close').on('click', function (e) {
+            e.preventDefault();
+            sessionStorage.setItem('regionBannerDismissed', '1');
+            $region.removeClass('active');
+        });
+
+        // Switch button
+        $region.find('.region-control').on('click', function (e) {
+            e.preventDefault();
+            switchToLang(suggestedDefaultLang.code, suggestedDefaultLang.subdomain);
+        });
+
+        // Dropdown toggle
+        var $market = $region.find('.region-market');
+        var $dropdownWrap = $region.find('.region-market-dropdown-wrap');
+        $market.on('click', function (e) {
+            if ($(e.target).closest('.region-market-dropdown-wrap').length) return;
+            e.preventDefault();
+            $dropdownWrap.toggleClass('active');
+        });
+
+        bindRegionLangClicks($region, currentLang, function () {
+            $dropdownWrap.removeClass('active');
+        });
+
+        // Close dropdown on outside click
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.region-market').length) {
+                $dropdownWrap.removeClass('active');
+            }
+        });
+    }
+    (window.__redirectCheck || Promise.resolve()).then(() => {
+        initRegionBanner();
+    }).catch(() => { });
+
+
+    // ── Header Region Switcher (staging only) ──
+    function initHeaderRegionSwitcher() {
+        const _isStaging = window.location.href.includes('webflow.io');
+        if (!_isStaging) return;
+
+        const currentLang = document.documentElement.lang || 'en-SG';
+        const currentRegionId = LANG_TO_REGION[currentLang] || 'sg';
+        const currentRegion = REGIONS.find(r => r.id === currentRegionId);
+        if (!currentRegion) return;
+
+        var $langBtn = $('.header-lang-btn');
+        var $wrap = $langBtn.closest('.header-lang-wrap');
+        var $dropdownWrap = $wrap.find('.region-market-dropdown-wrap');
+        var $dropdownItems = $dropdownWrap.find('.region-market-dropdown-item');
+
+        // Populate dropdown items with current state + href
+        populateRegionDropdown($dropdownItems, currentLang, null);
+
+        // Update header button text — "Singapore · EN"
+        var currentLangShort = currentLang.split('-')[0].toUpperCase();
+        $('.header-lang-txt').text(currentRegion.name + ' · ' + currentLangShort);
+
+        // Toggle dropdown on button click
+        $langBtn.on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $dropdownWrap.toggleClass('active');
+        });
+
+        // Close on outside click
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.header-lang-wrap').length) {
+                $dropdownWrap.removeClass('active');
+            }
+        });
+
+        // Language selection
+        bindRegionLangClicks($dropdownWrap, currentLang, function () {
+            $dropdownWrap.removeClass('active');
+        });
+    }
+    initHeaderRegionSwitcher();
+
     if ($('.intro-wrap').length) {
         if (window.__willRedirect) return;
+        var introTimer = setTimeout(function () {
+            $('.intro-wrap').addClass('loaded');
+        }, 3000);
         (window.__redirectCheck || Promise.resolve()).then(() => {
             if (!window.__willRedirect) {
+                clearTimeout(introTimer);
                 $('.intro-wrap').addClass('loaded')
             }
         }).catch(() => {
+            clearTimeout(introTimer);
             $('.intro-wrap').addClass('loaded')
         })
     }
@@ -5939,14 +6207,34 @@ const mainScript = () => {
         const pageScript = SCRIPT[`${pageName}Script`];
         if (typeof pageScript === 'function') pageScript();
     }
+    if (!pageName) revealPageFallback();
+}
+function revealPageFallback() {
+    if (window.__willRedirect) return;
+    $('.intro-wrap').addClass('loaded');
+    if ($('.sc-notfound').length) {
+        $('.notfound-wrap').removeClass('hidden');
+        $('.sc-notfound').addClass('active');
+    }
+}
+function runMainScriptOnce() {
+    if (window.__cfMainScriptRan) return;
+    window.__cfMainScriptRan = true;
+    try {
+        mainScript();
+    } catch (err) {
+        console.error('[cf] mainScript error:', err);
+        revealPageFallback();
+    }
 }
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mainScript);
+    document.addEventListener('DOMContentLoaded', runMainScriptOnce);
 } else {
-    mainScript();
+    runMainScriptOnce();
 }
 
 window.addEventListener('load', () => {
+    revealPageFallback();
     if (typeof ScrollTrigger !== 'undefined') {
         ScrollTrigger.refresh();
     }
