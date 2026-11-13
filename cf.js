@@ -5710,6 +5710,31 @@ const mainScript = () => {
         }
         corporateHero();
 
+        function corporateHeroForm() {
+            const $wrap = $('.corp-hero-form-wrap');
+            const $form = $wrap.find('.corp-hero-form');
+            if (!$form.length) return;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Tắt validate mặc định của browser để sự kiện submit luôn chạy vào handler
+            $form.attr('novalidate', true);
+            $form.on('submit', function (e) {
+                // Chặn submit mặc định + chặn handler submit của Webflow (delegate trên document)
+                e.preventDefault();
+                e.stopPropagation();
+
+                const email = $form.find('.corp-hero-input').val().trim();
+                if (!email || !emailRegex.test(email)) {
+                    $wrap.removeClass('success').addClass('error');
+                    $('.corp-hero-form-error').stop(true, true).slideDown();
+                    return;
+                }
+                $wrap.removeClass('error').addClass('success');
+                $('.corp-hero-form-error').stop(true, true).slideUp();
+            })
+        }
+        corporateHeroForm();
+
         function corporateGetFaq() {
             animateFaq();
             scrollToFaq();
