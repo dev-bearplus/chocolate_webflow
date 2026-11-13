@@ -8,15 +8,12 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
         window.location.href = '/';
     }
 
-    const _isStaging = window.location.href.includes('webflow.io');
-
     let currentLang = document.documentElement.lang || 'en-SG';
     const pathname = window.location.pathname;
-    const isRootHomepage = pathname === '/' || pathname === '';
     let currentSubdomain = localStorage.getItem('currentSubdomain');
     let checkDomain = '';
     let detectedCountryCode = '';
-    if (!currentSubdomain && (_isStaging || isRootHomepage)) {
+    if (!currentSubdomain) {
         const cachedSuggestedLang = sessionStorage.getItem('geoSuggestedLang');
         const cachedCountryCode = sessionStorage.getItem('geoCountryCode');
         if (cachedSuggestedLang) {
