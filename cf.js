@@ -87,33 +87,31 @@ window.__redirectCheck = (async function priorityLanguageCheck() {
 
         console.log('targetUrl', targetUrl);
 
-        if (_isStaging) {
-            if (!sessionStorage.getItem('regionBannerDismissed')) {
-                window.__regionSuggestion = {
-                    suggestedLang: storedSubdomain,
-                    currentLang: currentLang,
-                    targetUrl: targetUrl,
-                    langSubDomain: langSubDomain,
-                    countryCode: detectedCountryCode
-                };
-            }
-            return;
+        if (!sessionStorage.getItem('regionBannerDismissed')) {
+            window.__regionSuggestion = {
+                suggestedLang: storedSubdomain,
+                currentLang: currentLang,
+                targetUrl: targetUrl,
+                langSubDomain: langSubDomain,
+                countryCode: detectedCountryCode
+            };
         }
+        return;
 
-        try {
-            // Only verify that the destination exists. A GET would download the
-            // whole page here and then download it again after the redirect.
-            let response = await fetch(targetUrl, { method: 'HEAD' });
-            if (response.ok) {
-                window.__willRedirect = true;
-                window.location.replace(targetUrl);
-            } else {
-                // localStorage.setItem('currentSubdomain', currentLang);
-            }
-        } catch (error) {
-            console.error(error);
-            // localStorage.setItem('currentSubdomain', currentLang);
-        }
+        // try {
+        //     // Only verify that the destination exists. A GET would download the
+        //     // whole page here and then download it again after the redirect.
+        //     let response = await fetch(targetUrl, { method: 'HEAD' });
+        //     if (response.ok) {
+        //         window.__willRedirect = true;
+        //         window.location.replace(targetUrl);
+        //     } else {
+        //         // localStorage.setItem('currentSubdomain', currentLang);
+        //     }
+        // } catch (error) {
+        //     console.error(error);
+        //     // localStorage.setItem('currentSubdomain', currentLang);
+        // }
     }
 })();
 
@@ -394,7 +392,7 @@ const mainScript = () => {
         });
     }
 
-    // ── Region Suggestion Banner (staging only) ──
+    // ── Region Suggestion Banner ──
     function initRegionBanner() {
         var $region = $('.region');
         if (!$region.length) return;
@@ -510,10 +508,8 @@ const mainScript = () => {
     }).catch(() => { });
 
 
-    // ── Header Region Switcher (staging only) ──
+    // ── Header Region Switcher ──
     function initHeaderRegionSwitcher() {
-        const _isStaging = window.location.href.includes('webflow.io');
-        if (!_isStaging) return;
 
         const currentLang = document.documentElement.lang || 'en-SG';
         const currentRegionId = LANG_TO_REGION[currentLang] || 'sg';
