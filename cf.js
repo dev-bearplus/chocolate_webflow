@@ -5731,6 +5731,28 @@ const mainScript = () => {
                 }
                 $wrap.removeClass('error').addClass('success');
                 $('.corp-hero-form-error').stop(true, true).slideUp();
+
+                // Gửi event lead sang Blueshift
+                try {
+                    if (window.blueshift) {
+                        blueshift.identify({
+                            email: email,
+                            customer_id: '',
+                            unsubscribed: false,
+                        });
+                        blueshift.track("lead_email_submitted", {
+                            form_name: 'corporate_hero',
+                            form_type: 'static',
+                            device: getDeviceType(),
+                            email: email,
+                            customer_id: '',
+                        });
+                    } else {
+                        console.warn('[corp-hero-form] blueshift is not loaded');
+                    }
+                } catch (err) {
+                    console.error('[corp-hero-form] blueshift track failed', err);
+                }
             })
         }
         corporateHeroForm();
