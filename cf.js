@@ -299,8 +299,8 @@ const mainScript = () => {
     // ── Region / language helpers ──
     var REGIONS = [
         { id: 'sg', name: 'Singapore', languages: [{ code: 'en-SG', label: 'English', subdomain: '' }] },
-        { id: 'ae', name: 'UAE', languages: [{ code: 'en-AE', label: 'English', subdomain: 'ae-en' }, { code: 'ar-AE', label: 'العربية', subdomain: 'ae-ar' }] },
-        { id: 'hk', name: 'Hong Kong', languages: [{ code: 'en-HK', label: 'English', subdomain: 'hk-en' }, { code: 'zh-HK', label: '繁體中文', subdomain: 'hk-zh-hant' }] }
+        { id: 'ae', name: 'UAE', languages: [{ code: 'en-AE', label: 'English', subdomain: 'ae-en' }, { code: 'ar-AE', label: 'العربية', short: 'عربي', subdomain: 'ae-ar' }] },
+        { id: 'hk', name: 'Hong Kong', languages: [{ code: 'en-HK', label: 'English', subdomain: 'hk-en' }, { code: 'zh-HK', label: '繁體中文', short: '繁', subdomain: 'hk-zh-hant' }] }
     ];
     var LANG_TO_REGION = { 'en-SG': 'sg', 'en-AE': 'ae', 'ar-AE': 'ae', 'en-HK': 'hk', 'zh-HK': 'hk' };
 
@@ -522,7 +522,9 @@ const mainScript = () => {
         populateRegionDropdown($dropdownItems, currentLang, null);
 
         // Update header button text — desktop: "Singapore · EN", mobile: "EN"
-        var currentLangShort = currentLang.split('-')[0].toUpperCase();
+        // Use the language's custom `short` label if set (e.g. zh-HK → "繁"), otherwise the ISO prefix ("EN", "AR")
+        var currentLangObj = currentRegion.languages.find(l => l.code === currentLang);
+        var currentLangShort = (currentLangObj && currentLangObj.short) || currentLang.split('-')[0].toUpperCase();
         if ($(window).width() <= 991) {
             $('.header-lang-txt').text(currentLangShort);
         } else {
