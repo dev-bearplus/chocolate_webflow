@@ -5701,15 +5701,13 @@ const mainScript = () => {
                     spaceBetween: parseRem(8),
                     slidesPerView: 'auto',
                 })
-                if (!isStagging()) {
-                    $('.corp-hero-topup').addClass('swiper')
-                    $('.corp-hero-topup-inner').addClass('swiper-wrapper')
-                    $('.corp-hero-topup-item').addClass('swiper-slide')
-                    let swiperTopup = new Swiper('.corp-hero-topup', {
-                        spaceBetween: parseRem(10),
-                        slidesPerView: 'auto',
-                    })
-                }
+                $('.corp-hero-topup').addClass('swiper')
+                $('.corp-hero-topup-inner').addClass('swiper-wrapper')
+                $('.corp-hero-topup-item').addClass('swiper-slide')
+                let swiperTopup = new Swiper('.corp-hero-topup', {
+                    spaceBetween: parseRem(10),
+                    slidesPerView: 'auto',
+                })
             }
         }
         corporateHero();
