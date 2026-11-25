@@ -568,12 +568,17 @@ const mainScript = () => {
 
     // The header variables are declared further down; if the script stopped before them, skip the offset.
     function syncAppBannerOffset() {
+        // The top bar sits below the banner while it is shown.
+        var $activeBanner = $('.banner.active').first();
+        $('.topbar').css('top', $activeBanner.length ? $activeBanner.outerHeight() + 'px' : '');
         try { updateHeaderScrollThreshold(); } catch (e) { }
     }
 
     function initAppBanner() {
-        var $banner = $('.banner').first();
-        if (!$banner.length) return;
+        // `.banner` is the bar at the top (app banner); `.banner-bot` the one fixed to the bottom (blog banners).
+        var $top = $('.banner').first();
+        var $bottom = $('.banner-bot').first();
+        if (!$top.length && !$bottom.length) return;
 
         // Staging only until the AppsFlyer numbers are checked; remove to go live.
         if (!isStagging()) return;
@@ -589,17 +594,36 @@ const mainScript = () => {
         // The region prompt has priority; the banner returns on the next page view.
         if ($('.region.active').length) return;
 
+        // Same page rules as the AppsFlyer banners, matched on path + query.
+        var pathAndQuery = window.location.pathname + window.location.search;
+
+        // Visitors sent from the app already have it.
+        if (pathAndQuery.indexOf('utm_medium=app') !== -1) return;
+
         // `data-banner` on the element picks the variant; blog pages default to the blog one.
-        var isBlogPage = /^\/(?:(?:hk-zh-hant|hk-en|ae-ar|ae-en)\/)?blogs?(\/|$)/.test(window.location.pathname);
-        var banner = market[$banner.attr('data-banner')] || (isBlogPage && market.blog) || market.app;
+        var isBlogPage = pathAndQuery.indexOf('/blog') !== -1;
+        var variant = $bottom.attr('data-banner') || $top.attr('data-banner');
+        var banner = market[variant] || (isBlogPage && market.blog) || market.app;
+
+        // Business URLs only ever get the business banner.
+        if (banner !== market.business && pathAndQuery.indexOf('business') !== -1) return;
+
+        // Blog banners use the bottom bar when the page has one; only one element is ever shown.
+        var isBlogBanner = banner === market.blog || banner === market.business;
+        var $banner = isBlogBanner && $bottom.length ? $bottom : $top;
+        if (!$banner.length) return;
+        var isTopBanner = $banner.is($top);
 
         var dismissedKey = 'appBannerDismissed:' + banner.id;
         if (sessionStorage.getItem(dismissedKey)) return;
 
         var query = buildAppBannerQuery(banner, market.prefix);
-        $banner.find('.banner-cta').attr('href', 'https://chocolatefinance.onelink.me/' + banner.oneLink + '?' + query);
+        $banner.find('.banner-cta, .banner-bot-link').attr('href', 'https://chocolatefinance.onelink.me/' + banner.oneLink + '?' + query);
         $banner.addClass('active');
-        syncAppBannerOffset();
+        if (isTopBanner) {
+            syncAppBannerOffset();
+            $(window).on('resize', debounce(syncAppBannerOffset));
+        }
 
         // One impression per page view on which the banner is shown.
         var impressionUrl = 'https://impressions.onelink.me/' + banner.oneLink + '?' + query;
@@ -615,11 +639,11 @@ const mainScript = () => {
         }
 
         // Closed for the rest of the session (this tab), like the AppsFlyer banner.
-        $banner.find('.banner-close').on('click', function (e) {
+        $banner.find('.banner-close, .banner-bot-close').on('click', function (e) {
             e.preventDefault();
             sessionStorage.setItem(dismissedKey, '1');
             $banner.removeClass('active');
-            syncAppBannerOffset();
+            if (isTopBanner) syncAppBannerOffset();
             sendAppBannerHit('https://banner.appsflyersdk.com/sb/' + banner.id + '/dismiss');
         });
     }
