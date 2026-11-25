@@ -500,8 +500,133 @@ const mainScript = () => {
             }
         });
     }
+    // ── App Download Banner ──
+    // Replaces the AppsFlyer Smart Banner. AppsFlyer still receives the same three
+    // signals: an impression when the banner is shown, the OneLink behind the CTA,
+    // and a dismiss call on close. IDs come from AppsFlyer; ask Nathan before changing.
+    // Keyed by page language. `prefix` goes in front of the default parameter values.
+    var APP_BANNERS = {
+        'en-SG': {
+            prefix: '',
+            app: { oneLink: 'nxW9', id: '4fd00006-45ee-4692-aaa2-f7d76596b9c4' },
+            blog: { oneLink: 'nxW9', id: '049b0297-3772-438f-8b75-cc03f304e4b6', deepLink: 'chocolatefinance://' },
+            business: { oneLink: 'OH4k', id: 'f9cc07be-6651-4146-a1e6-7a1ed5eb5694', deepLink: 'chocolatebusiness://' }
+        },
+        'en-HK': {
+            prefix: 'hk_',
+            app: { oneLink: 'nxW9', id: 'f860d8e6-a82f-4933-a238-8c5c3d5abef6' },
+            blog: { oneLink: 'nxW9', id: 'c1da0bb9-039c-4adf-a64f-5f00498ab952', deepLink: 'chocolatefinance://' }
+        },
+        'zh-HK': {
+            prefix: 'hk_',
+            app: { oneLink: 'nxW9', id: '2b24d4b6-ba13-42c8-871c-cbecf8d659bf' },
+            blog: { oneLink: 'nxW9', id: '26e8b8c3-9f1d-467c-aa24-575cd20d0335', deepLink: 'chocolatefinance://' }
+        },
+        'en-AE': {
+            prefix: 'uae_',
+            app: { oneLink: 'nxW9', id: '3623eacf-49a1-428c-9f52-b0820814a544' }
+        },
+        'ar-AE': {
+            prefix: 'uae_',
+            app: { oneLink: 'nxW9', id: 'e5ab8451-9509-4368-86d4-33e468d5c573' }
+        }
+    };
+    // Page UTM → OneLink parameter, with the value used when the UTM is absent.
+    var APP_BANNER_UTM_MAP = [
+        ['utm_source', 'pid', 'af_banner'],
+        ['utm_campaign', 'c', 'af_banner_campaign'],
+        ['utm_medium', 'af_channel', 'af_web_banner'],
+        ['utm_content', 'af_adset', 'af_banner_adset'],
+        ['utm_term', 'af_ad', 'af_banner_ad']
+    ];
+
+    function buildAppBannerQuery(banner, prefix) {
+        var page = new URLSearchParams(window.location.search);
+        var hasUtm = false;
+        var params = [['creative_id', banner.id], ['af_banner', 'true']];
+        APP_BANNER_UTM_MAP.forEach(function (row) {
+            var value = page.get(row[0]);
+            if (value) hasUtm = true;
+            params.push([row[1], value || prefix + row[2]]);
+        });
+        if (banner.deepLink) params.push(['af_dp', banner.deepLink]);
+        ['gclid', 'fbclid'].forEach(function (key) {
+            if (page.get(key)) params.push([key, page.get(key)]);
+        });
+        // Sent by the AppsFlyer banner SDK on every hit; kept so the reports match.
+        params.push(['af_banner_build', hasUtm ? 'utm' : 'static'], ['af_banner_config', 'forward_utm'], ['af_banner_sdk_ver', '2']);
+        return params.map(function (pair) {
+            return pair[0] + '=' + encodeURIComponent(pair[1]);
+        }).join('&');
+    }
+
+    function sendAppBannerHit(url) {
+        try {
+            fetch(url, { mode: 'no-cors', keepalive: true }).catch(function () { });
+        } catch (e) { }
+    }
+
+    // The header variables are declared further down; if the script stopped before them, skip the offset.
+    function syncAppBannerOffset() {
+        try { updateHeaderScrollThreshold(); } catch (e) { }
+    }
+
+    function initAppBanner() {
+        var $banner = $('.banner').first();
+        if (!$banner.length) return;
+
+        // Staging only until the AppsFlyer numbers are checked; remove to go live.
+        if (!isStagging()) return;
+
+        var market = APP_BANNERS[document.documentElement.lang || 'en-SG'];
+        if (!market) return;
+
+        // Phones and tablets only (iPadOS reports itself as a Mac).
+        var ua = navigator.userAgent || '';
+        var isMobileDevice = /Android|iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        if (!isMobileDevice) return;
+
+        // The region prompt has priority; the banner returns on the next page view.
+        if ($('.region.active').length) return;
+
+        // `data-banner` on the element picks the variant; blog pages default to the blog one.
+        var isBlogPage = /^\/(?:(?:hk-zh-hant|hk-en|ae-ar|ae-en)\/)?blogs?(\/|$)/.test(window.location.pathname);
+        var banner = market[$banner.attr('data-banner')] || (isBlogPage && market.blog) || market.app;
+
+        var dismissedKey = 'appBannerDismissed:' + banner.id;
+        if (sessionStorage.getItem(dismissedKey)) return;
+
+        var query = buildAppBannerQuery(banner, market.prefix);
+        $banner.find('.banner-cta').attr('href', 'https://chocolatefinance.onelink.me/' + banner.oneLink + '?' + query);
+        $banner.addClass('active');
+        syncAppBannerOffset();
+
+        // One impression per page view on which the banner is shown.
+        var impressionUrl = 'https://impressions.onelink.me/' + banner.oneLink + '?' + query;
+        var uaData = navigator.userAgentData;
+        if (/Android/i.test(ua) && uaData && uaData.getHighEntropyValues) {
+            uaData.getHighEntropyValues(['model', 'platformVersion']).then(function (hints) {
+                sendAppBannerHit(impressionUrl + '&af_ch_model=' + encodeURIComponent(hints.model || '') + '&af_ch_os_version=' + encodeURIComponent(hints.platformVersion || ''));
+            }).catch(function () {
+                sendAppBannerHit(impressionUrl);
+            });
+        } else {
+            sendAppBannerHit(impressionUrl);
+        }
+
+        // Closed for the rest of the session (this tab), like the AppsFlyer banner.
+        $banner.find('.banner-close').on('click', function (e) {
+            e.preventDefault();
+            sessionStorage.setItem(dismissedKey, '1');
+            $banner.removeClass('active');
+            syncAppBannerOffset();
+            sendAppBannerHit('https://banner.appsflyersdk.com/sb/' + banner.id + '/dismiss');
+        });
+    }
+
     (window.__redirectCheck || Promise.resolve()).then(() => {
         initRegionBanner();
+        initAppBanner();
     }).catch(() => { });
 
 
@@ -1051,6 +1176,7 @@ const mainScript = () => {
         if ($announcement.length) headerScrollThreshold += $announcement.height() || 0;
         if ($topbar.length) headerScrollThreshold = (header.height() || 0) + ($topbar.height() || 0);
         if ($('.region.active').length) headerScrollThreshold += $('.region.active').outerHeight() || 0;
+        if ($('.banner.active').length) headerScrollThreshold += $('.banner.active').outerHeight() || 0;
     }
     updateHeaderScrollThreshold();
     $(window).on('resize', debounce(updateHeaderScrollThreshold));
@@ -1395,9 +1521,9 @@ const mainScript = () => {
                     $('.sticky-wrap').addClass('on-open');
                     $('.body').css('--open-top', `${$('.topbar').outerHeight() * -1}px`)
                 }
-                if ($('.region.active').length) {
+                if ($('.region.active, .banner.active').length) {
                     $('.sticky-wrap').addClass('on-open');
-                    var topOffset = ($('.topbar').length ? $('.topbar').outerHeight() : 0) + ($('.region.active').outerHeight() || 0);
+                    var topOffset = ($('.topbar').length ? $('.topbar').outerHeight() : 0) + ($('.region.active, .banner.active').outerHeight() || 0);
                     $('.body').css('--open-top', `${topOffset * -1}px`)
                 }
                 if (!isTouchDevice()) {
@@ -1441,7 +1567,7 @@ const mainScript = () => {
                     }, 300);
                     $('.header').removeClass('on-open');
                 }
-                if ($('.topbar').length || $('.announcement').length || $('.region.active').length) {
+                if ($('.topbar').length || $('.announcement').length || $('.region.active, .banner.active').length) {
                     $('.sticky-wrap').removeClass('on-open');
                 }
                 if (!isTouchDevice()) {
