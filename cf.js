@@ -163,7 +163,7 @@ const mainScript = () => {
 
         // check allow routes for AE
         const allowedRoutesAELive = ['waitlist', 'about-us', 'app-terms-and-conditions', 'privacy', 'prospectus', 'chocolate-global-incom-fund-kiid', 'how-it-works', 'boost-with-usd', 'contact-us', 'faqs', 'app-fund-documents'];
-        const allowedRoutesAEStagging = ['waitlist', 'about-us', 'app-terms-and-conditions', 'privacy', 'prospectus', 'chocolate-global-incom-fund-kiid', 'how-it-works', 'boost-with-usd', 'contact-us', 'faqs', 'app-fund-documents'];
+        const allowedRoutesAEStagging = ['waitlist', 'about-us', 'app-terms-and-conditions', 'privacy', 'prospectus', 'chocolate-global-incom-fund-kiid', 'how-it-works', 'boost-with-usd', 'contact-us', 'faqs', 'app-fund-documents', 'blog', '/blogs', '/author'];
         const allowedRoutesAE = isStagging() ? allowedRoutesAEStagging : allowedRoutesAELive;
         const checkAllowedRouteAE = allowedRoutesAE.some(route => route.startsWith('/') ? pathname.includes(route) : lastSegment === route);
         const isHK = pathname.includes('hk-en') || pathname.includes('hk-zh-hant');
